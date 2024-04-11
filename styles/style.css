@@ -1,0 +1,48 @@
+/* Variabler */
+:root {
+  --background-color: #0f3a5a;
+  --black-color: #071a2a;
+  --icon-color: #7bb1f1;
+  --map-color: #d2e1ff;
+  --accent-color: #ff005c;
+  --white-color: #ffffff;
+}
+
+/* Reset css */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Font family */
+body {
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Brug denne farve til mørk baggrund */
+.dark {
+  background-color: var(--background-color);
+  color: var(--white-color);
+}
+
+/* Brug denne farve til lys baggrund */
+.light {
+  background-color: var(--map-color);
+  color: var(--black-color);
+}
+
+.btn {
+  background-color: var(--white-color);
+  color: var(--black-color);
+  border: none;
+  font-size: 2rem;
+  padding: calc(1rem * 1) calc(1rem * 2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: calc(1rem / 2);
+}
