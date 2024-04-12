@@ -8,6 +8,12 @@
   --white-color: #ffffff;
 }
 
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  padding-top: 60px;
+}
+
 /* Reset css */
 * {
   box-sizing: border-box;
@@ -40,11 +46,14 @@ body {
   color: var(--black-color);
   border: none;
   font-size: 2rem;
+  font-family: "JetBrains Mono", monospace;
   padding: calc(1rem * 1) calc(1rem * 2);
   display: flex;
   justify-content: center;
   align-items: center;
   gap: calc(1rem / 2);
+  border-radius: 50px;
+  margin: 20px;
 }
 
 
@@ -59,4 +68,55 @@ body {
   transform: translate(0%, -50%);
   width: 100vw;
 
+}
+
+
+/*-------------------
+-------type-------
+-------------------*/
+.type_container {
+display: flex;
+justify-content: space-evenly;
+}
+
+.type_ikoner {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.type_flex {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.type_reagens {
+  position: absolute;
+  right: 0;
+  padding-right: 60px;
+  height: 500px;
+  top: 25%;
+}
+
+.type_knap {
+  float: right;
+}
+
+.type_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.type_wrapper button{
+  border-radius: 100px;
+  border: none;
+  box-shadow: 0px 0px 50px #7bb1f1;
 }
