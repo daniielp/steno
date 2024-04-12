@@ -11,7 +11,7 @@
 h1 {
   font-size: 3rem;
   text-align: center;
-  padding-top: 60px;
+  padding: 20px;
 }
 
 /* Reset css */
@@ -273,13 +273,21 @@ width: 32px;
     flex-direction: column;
     justify-content: space-between;
   }
+
+  .type_reagens_wrapper{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    padding: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   
   .type_reagens {
-    position: absolute;
-    right: 0;
-    padding-right: 60px;
-    height: 500px;
-    top: 25%;
+    height: 50vh;
+
   }
   
   .type_knap {
@@ -348,20 +356,34 @@ width: 32px;
 }
 
 .opsummering_text{
-  font-size: 1rem;
+  font-size: 0.8rem;
   width: 40vw;
 }
 
+
+
 #clipboard{
+  position: relative;
   background-color: #ffffff;
-  width: 30vw;
+  width: 25vw;
   height: fit-content;
-  padding: 4vw 0vw;
+  padding: 4vw 0vw 15vw 0vw;
   color: black;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
+
+  border: solid 5px burlywood;
+}
+
+#clip{
+  position: absolute;
+  width: 10vw;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #clipboard div{
@@ -376,6 +398,38 @@ padding: 0vw 4vw 0vw 1vw;
 width: 100%;
 }
 
-.item{
+.opsummering_bullet{
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  padding: 20px 20px;
+}
 
+.bullets{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+}
+
+.bullets img{
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+  overflow: visible;
+}
+
+/*-------------------
+--------footer-------
+-------------------*/
+
+.absolute_footer{
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
 }
