@@ -290,13 +290,13 @@ width: 32px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
+    
   }
   
-  .type_wrapper button{
+  .type_klik{
     border-radius: 100px;
     border: none;
-    box-shadow: 0px 0px 50px #7bb1f1;
+    box-shadow: none;
     transition: 2s all ease;
   
     animation-name: slideIn;
