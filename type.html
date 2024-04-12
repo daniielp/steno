@@ -19,20 +19,20 @@
     <main>
         <div class="type_container">
             <div class="type_wrapper">
-                <button>
+                <button class="type_klik">
             <div class="type_ikoner">
                 <img src="img/icons/bakterie.svg" alt="">
             </div>
                 </button>
-            <h2>Bakterie</h2>
+            <h3>Bakterie</h3>
             </div>
             <div class="type_wrapper">
-                <button>
+                <button class="type_klik">
             <div class="type_ikoner">
                 <img src="img/icons/virus.svg" alt="">
             </div>
                 </button>
-            <h2>Virus</h2>
+            <h3>Virus</h3>
             </div>
         </div>
 
@@ -55,8 +55,10 @@
 
 
     <script>
-        function type_skygge() {
-            document.getElementsByClassName("type_ikoner").style
+        var typeknap = document.getElementsByClassName("type_klik");
+
+        typeknap.onclick = function(){
+            typeknap.style.boxShadow = " 0px 0px 40px #7bb1f1";
         }
     </script>
 
