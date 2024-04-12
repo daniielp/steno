@@ -14,6 +14,17 @@ h1 {
   padding-top: 60px;
 }
 
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+h3 {
+  padding-top: 10px;
+}
+
 /* Reset css */
 * {
   box-sizing: border-box;
@@ -255,6 +266,8 @@ width: 32px;
 .type_container {
   display: flex;
   justify-content: space-evenly;
+  margin-left: 200px;
+  margin-right: 200px;
   }
   
   .type_ikoner {
@@ -378,4 +391,35 @@ width: 100%;
 
 .item{
 
+}
+
+
+/*-------------------
+-----Symptomer-----
+-------------------*/
+
+.symp_container {
+  display: flex;
+  column-gap: 120px;
+  row-gap: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 480px;
+  margin-right: 480px;
+}
+
+.symp_item {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.symp_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
