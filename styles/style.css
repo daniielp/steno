@@ -51,11 +51,20 @@ body {
 --------video--------
 -------------------*/
 
+.video_container {
+  position: relative;
+}
+
 #video-player {
-  width: 100dvw;
+  width: 100%;
+  height: 100%;
 }
 
 .video_timeline {
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  right: 0;
   display: flex;
   gap: 16px;
 }
