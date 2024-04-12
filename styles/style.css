@@ -47,16 +47,89 @@ body {
   gap: calc(1rem / 2);
 }
 
+/*-------------------
+--------video--------
+-------------------*/
+
+#video-player {
+  width: 100dvw;
+}
+
+.video_timeline {
+  display: flex;
+  gap: 16px;
+}
+
+.video_timeline_wrapper {
+  flex:1;
+}
+
+.video_play_btn {
+  outline: none;
+  border: none;
+  background-color: var(--white-color);
+  color: var(--background-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+}
+
+.video_years {
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.video_skips {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.spacer {
+  flex: 1;
+  height: 5px;
+  border-radius: 2px;
+  background-color: var(--white-color);
+}
+
+.video_btn {
+  position: relative;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  outline: 5px solid var(--white-color);
+  border: none;
+  margin: 1px;
+  color: var(--white-color);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.video_btn.active::before {
+  position: absolute;
+  border-radius: 50%;
+  margin: 5px;
+  inset: 0;
+  content: attr(data-value);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white-color);
+  color: var(--background-color);
+}
 
 /*-------------------
 -------forside-------
 -------------------*/
 
-#armbånd{
+#armbånd {
   position: absolute;
   top: 50%;
   left: -25vw;
   transform: translate(0%, -50%);
   width: 100vw;
-
 }
