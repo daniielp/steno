@@ -1,14 +1,21 @@
+// /*------------------
+// -------index--------
+// ------------------*/
+// const armbandsknap = document.getElementsByClassName("blinker"); 
+
+// armbandsknap[0].addEventListener("click", function() {
+//     window.location.href = "https://www.w3schools.com/jsref/met_element_addeventlistener.asp";
+//   });
+
+//   armbandsknap[1].addEventListener("click", function() {
+//     window.location.href = "https://www.w3schools.com/jsref/met_element_addeventlistener.asp";
+//   });
+
 /*------------------
--------index--------
+-------Type--------
 ------------------*/
-const armbåndsknap = document.getElementsByClassName("blinker"); 
+const knapper = document.getElementsByClassName("type_klik");
 
-armbåndsknap[0].addEventListener("click", function() {
-    window.location.href = "https://www.w3schools.com/jsref/met_element_addeventlistener.asp";
-    console.log("armbåndsknap");
-  });
-
-  armbåndsknap[1].addEventListener("click", function() {
-    window.location.href = "https://www.w3schools.com/jsref/met_element_addeventlistener.asp";
-    console.log("armbåndsknap");
-  });
+knapper[0].addEventListener("click", function() {
+console.log("hej");
+});
