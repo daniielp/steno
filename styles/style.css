@@ -10,8 +10,6 @@
 
 h1 {
   font-size: 3rem;
-  text-align: center;
-  padding: 20px;
 }
 
 h2 {
@@ -39,6 +37,9 @@ body {
   font-weight: 400;
   font-style: normal;
   overflow: hidden;
+
+  /* Denne lille kommando sørger for at man ikke kan overstrege noget på siderne */
+  user-select: none;
 }
 
 /* Brug denne farve til mørk baggrund */
@@ -69,11 +70,23 @@ body {
 }
 
 /*-------------------
+--------header--------
+-------------------*/
+header{
+display: flex;
+flex-direction: column;
+align-items: center;
+
+}
+
+
+/*-------------------
 --------video--------
 -------------------*/
 
 .video_container {
   position: relative;
+  height: 100%;
 }
 
 #video-player {
@@ -82,12 +95,13 @@ body {
 }
 
 .video_timeline {
-  position: absolute;
-  bottom: 4px;
+  position: fixed;
+  bottom: 0;
   left: 0;
   right: 0;
   display: flex;
   gap: 16px;
+  padding: 20px;
 }
 
 .video_timeline_wrapper {
@@ -269,10 +283,19 @@ width: 32px;
 -------type-------
 -------------------*/
 .type_container {
+  position: relative;
   display: flex;
-  justify-content: space-evenly;
-  margin-left: 200px;
-  margin-right: 200px;
+  justify-content: center;
+
+  }
+
+  .type_absolute{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40vw;
+    justify-content: space-between;
   }
   
   .type_ikoner {
@@ -284,12 +307,30 @@ width: 32px;
     align-items: center;
     flex-direction: column;
   }
-  
-  .type_flex {
-    height: 100dvh;
-    display: flex;
+
+  .streg{
+    background-color: #ffffff;
+    width: 3px;
+    height: 50px;
+  }
+
+  .absolute_text{
+    position: absolute;
+    bottom: -200px;
+
+    display: none;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+
+    width: 30vw;
+    height: 30vh;
+
+  }
+
+  .absolute_text p{
+    font-size: 0.8rem;
   }
 
   .type_reagens_wrapper{
@@ -301,6 +342,8 @@ width: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    z-index: -111;
   }
   
   .type_reagens {
@@ -310,6 +353,7 @@ width: 32px;
   
   .type_knap {
     float: right;
+    text-decoration: none;
   }
   
   .type_wrapper {
@@ -331,6 +375,7 @@ width: 32px;
   
     aspect-ratio: 3 / 2;
   
+    cursor: pointer;
     
   }
 
@@ -441,6 +486,53 @@ width: 100%;
   overflow: visible;
 }
 
+
+
+/*-------------------
+-----Symptomer-----
+-------------------*/
+.lille_overskrift{
+  font-size: 1rem;
+}
+
+.symp_container {
+  display: flex;
+  column-gap: 40px;
+  row-gap: 40px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 40vw;
+  padding: 20px 0px;
+}
+
+.symp_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+}
+
+.symp_wrapper img{
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  overflow: visible;
+  cursor: pointer;
+
+  /*animation*/
+  transition: 2s all ease;
+}
+
+/*-------------------
+------Smittevej------
+-------------------*/
+.smittevej{
+  justify-content: space-around;
+}
+
+
 /*-------------------
 --------footer-------
 -------------------*/
@@ -452,32 +544,14 @@ width: 100%;
   left: 0;
 }
 
-/*-------------------
------Symptomer-----
--------------------*/
 
-.symp_container {
+  /* til at fordele knapperne på slut-siden*/
+.slut{
   display: flex;
-  column-gap: 120px;
-  row-gap: 50px;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-left: 480px;
-  margin-right: 480px;
+  justify-content: space-between;
 }
 
-.symp_item {
-  background-color: #ffffff;
-  padding: 40px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.symp_wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+footer a{
+  float: right;
+  text-decoration: none;
 }

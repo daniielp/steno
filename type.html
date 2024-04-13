@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Steno - Byg en sygdom</title>
+    <link rel="icon" type="image/x-icon" href="img/icons/virus.svg">
     <link rel="stylesheet" href="/styles/style.css" />
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,27 +16,42 @@
     <script src="scripts/type.js" defer></script>
   </head>
 
-
-  <body class="dark type_flex">
+  <header>
     <h1>VÆLG TYPE</h1>
+  </header>
+
+  <body class="dark">
+
     <main>
-        <div class="type_container">
-            <div class="type_wrapper">
-                <button class="type_klik">
-            <div class="type_ikoner">
-                <img src="img/icons/bakterie.svg" alt="">
+        <div class="type_container type_absolute">
+            
+            <div class="symp_wrapper">
+                <img src="img/icons/bakterie.svg" alt="" class="type_knap">
+                <h3>Bakterie</h3>
+
+                <div class="absolute_text">
+                  <div class="streg"></div>
+                  <p>
+                    Bakterier er encellede mikroorganismer, der er i stand til at formere sig selvstændigt ved deling. Bakterier har et enkelt kromosom, og mens bakterien lever, kan den udveksle arvemateriale med andre bakterier.
+                  </p>
+                </div>
             </div>
-                </button>
-            <h3>Bakterie</h3>
+
+            
+
+
+            <div class="symp_wrapper">
+                <img src="img/icons/virus.svg" alt="" class="type_knap">
+                <h3>Virus</h3>
+
+                <div class="absolute_text">
+                  <div class="streg"></div>
+                  <p>
+                    Virus er en mikroorganisme, som kan være årsag til smitsomme sygdomme, fx forkølelse, influenza og leverbetændelse. Virus trænger ind i og udnytter levende celler og kan kun formere sig i disse; uden for en værtscelle eksisterer viruspartiklen som en livløs organisme uden eget stofskifte.
+                  </p>
+                </div>
             </div>
-            <div class="type_wrapper">
-                <button class="type_klik">
-            <div class="type_ikoner">
-                <img src="img/icons/virus.svg" alt="">
-            </div>
-                </button>
-            <h3>Virus</h3>
-            </div>
+
         </div>
 
         <div class="type_reagens_wrapper">
@@ -44,10 +60,10 @@
     </main>
 
 
-    <footer>
-        <button class="btn type_knap">
+    <footer class="absolute_footer">
+        <a href="symptomer.html" class="btn">
             Næste >
-        </button>
+        </a>
 
     </footer>
 
