@@ -338,17 +338,39 @@ width: 32px;
     top: 0px;
     right: 0px;
     height: 100%;
-    padding: 80px;
+    width: 220px;
     display: flex;
     align-items: center;
     justify-content: center;
 
     z-index: -111;
+
+    transition: 2s all ease;
+
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode:forwards; 
   }
   
   .type_reagens {
     height: 50vh;
 
+  }
+
+  #fyld{
+    transition: 1s all ease;
+  }
+
+
+  @keyframes slideCenter {
+    from {  
+      width: 220px;
+    }
+  
+    to {
+
+      width: 100%;
+    }
   }
   
   .type_knap {
@@ -551,7 +573,15 @@ width: 100%;
   justify-content: space-between;
 }
 
-footer a{
+.hoejre{
+
+  /*animation*/
+  transition: 1s all ease;
+
   float: right;
   text-decoration: none;
+  cursor: pointer;
+
+  background-color: grey;
+  pointer-events: none;
 }
