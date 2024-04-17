@@ -7,6 +7,9 @@ const bakterie = document.getElementById("bakterie_animation");
 const animation = document.getElementById("smittevej_tekst");
 const fyld = document.getElementById("fyld");
 
+//audio
+let lyde = document.getElementsByTagName("audio");
+
 //footer knappen
 const footerKnap = document.getElementsByClassName("hoejre");
 
@@ -49,6 +52,7 @@ knapper[i].addEventListener("click", function() {
 
         if (klikket == false) {
             knapper[i].style.boxShadow = "0px 0px 40px #7bb1f1";
+            lyde[i].play();
             klikket = true;
             fyld.setAttribute("d", "M14 323C14 342.33 29.67 358 49 358V358C68.33 358 84 342.33 84 323V24H14V323Z");
 
@@ -62,6 +66,7 @@ knapper[i].addEventListener("click", function() {
                 knapper[i].style.boxShadow = "none";
             }
             knapper[i].style.boxShadow = "0px 0px 40px #7bb1f1";
+            lyde[i].play();
         }});
 }
 

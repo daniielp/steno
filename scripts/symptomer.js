@@ -14,6 +14,7 @@ knapper[i].addEventListener("click", function() {
     antal += 1;
         if (antal < 2) {
             knapper[i].style.boxShadow = "0px 0px 40px #7bb1f1";
+            lyde[i].play();
             for (let i = 0; i < 3; i++) {
                 let tal = Math.floor(startTal+(Math.random()*5+1))
                 knapper[tal].style.backgroundColor = "grey";
@@ -22,7 +23,7 @@ knapper[i].addEventListener("click", function() {
                 knapper[tal].style.pointerEvents = "none";
                 fyld.setAttribute("d", "M14 323C14 342.33 29.67 358 49 358V358C68.33 358 84 342.33 84 323V194H14V323Z");
             }
-            lyde[i].play();
+
         }else if (antal < 3) {
             knapper[i].style.boxShadow = "0px 0px 40px #7bb1f1";
             fyld.setAttribute("d", `M14 323C14 342.33 29.67 358 49 358V358C68.33 358 84 342.33 84 323V${194-(antal*20)}H14V323Z`);

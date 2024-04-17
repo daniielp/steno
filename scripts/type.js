@@ -3,6 +3,9 @@ const tekst = document.getElementsByClassName("absolute_text");
 const fyld = document.getElementById("fyld");
 let klikket = false;
 
+//audio
+let lyde = document.getElementsByTagName("audio");
+
 //footer knappen
 const footerKnap = document.getElementsByClassName("hoejre");
 
@@ -19,6 +22,7 @@ knapper[i].addEventListener("click", function() {
             //aktiver footer knappen
             footerKnap[0].style.backgroundColor = "#ffffff";
             footerKnap[0].style.pointerEvents = "all";
+            lyde[0].play();
 
         }else {
             for (let i = 0; i < knapper.length; i++) {
@@ -27,5 +31,6 @@ knapper[i].addEventListener("click", function() {
             }
             knapper[i].style.boxShadow = "0px 0px 40px #7bb1f1";
             tekst[i].style.display = "flex";
+            lyde[0].play();
         }});
 }
