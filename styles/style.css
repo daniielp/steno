@@ -176,6 +176,13 @@ align-items: center;
   background-color: var(--white-color);
 }
 
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
 .video_btn {
   position: relative;
   border-radius: 50%;
@@ -187,7 +194,10 @@ align-items: center;
   color: var(--white-color);
   background-color: transparent;
   cursor: pointer;
+ 
 }
+
+
 
 .video_btn.active::before {
   position: absolute;
@@ -200,6 +210,8 @@ align-items: center;
   align-items: center;
   background-color: var(--white-color);
   color: var(--background-color);
+  transform: scale(1);
+  animation: ping 200ms ease-in;
 }
 
 /*-------------------
