@@ -222,11 +222,22 @@ align-items: center;
   animation-fill-mode:forwards; 
 }
 
+@keyframes slideIn {
+  from {  
+    top: 50%;
+    left: -250vw;
+    transform: translate(0%, -50%);
+  }
+
+  to {
+    top: 50%;
+    left: -2vw;
+    transform: translate(0%, -50%);
+  }
+}
 
 
-
-
-
+/*animation på knappen*/
 .blinker{
 
   transition: 2s all ease;
@@ -241,7 +252,21 @@ align-items: center;
 
 }
 
+@keyframes blinker {
+  0% {  
+    fill: #D9D9D9;
+  }
 
+  50% {
+    fill: #ffffff;
+  }
+
+  100% {
+    fill: #D9D9D9;
+  }
+}
+
+/*animation på teksten*/
 
 #index_infoText{
   position: absolute;
@@ -264,28 +289,6 @@ align-items: center;
   
 }
 
-#index_infoText img{
-width: 32px;
-}
-
-#index_infoText p{
-  font-size: 1rem;
-}
-
-@keyframes slideIn {
-  from {  
-    top: 50%;
-    left: -250vw;
-    transform: translate(0%, -50%);
-  }
-
-  to {
-    top: 50%;
-    left: -2vw;
-    transform: translate(0%, -50%);
-  }
-}
-
 @keyframes blink {
   0% {  
     opacity: 0;
@@ -300,19 +303,17 @@ width: 32px;
   }
 }
 
-@keyframes blinker {
-  0% {  
-    fill: #D9D9D9;
-  }
-
-  50% {
-    fill: #ffffff;
-  }
-
-  100% {
-    fill: #D9D9D9;
-  }
+#index_infoText img{
+width: 32px;
 }
+
+#index_infoText p{
+  font-size: 1vw;
+}
+
+
+
+
 
 
 /*-------------------
@@ -344,16 +345,10 @@ width: 32px;
     flex-direction: column;
   }
 
-  .streg{
-    background-color: #ffffff;
-    width: 3px;
-    height: 50px;
-  }
+  /* Informerende tekst*/
 
   .absolute_text{
-    position: absolute;
-    bottom: -200px;
-
+    bottom: 0px;
     display: none;
     flex-direction: column;
     align-items: center;
@@ -363,6 +358,12 @@ width: 32px;
     width: 30vw;
     height: 30vh;
 
+  }
+
+  .streg{
+    background-color: #ffffff;
+    width: 3px;
+    height: 50px;
   }
 
   .absolute_text p{
@@ -408,34 +409,155 @@ width: 32px;
       width: 100%;
     }
   }
-  
-  .type_knap {
-    float: right;
-    text-decoration: none;
-  }
-  
+    
   .type_wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     
   }
-  
-  .type_klik{
-    border-radius: 100px;
-    border: none;
-    box-shadow: none;
-    transition: 2s all ease;
-  
-    animation-name: slideIn;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-  
-    aspect-ratio: 3 / 2;
-  
-    cursor: pointer;
+
+/*-------------------
+-----Symptomer-----
+-------------------*/
+.lille_overskrift{
+  font-size: 1rem;
+}
+
+/* Den container alle ikonerne er i*/
+.symp_container {
+  display: flex;
+  column-gap: 40px;
+  row-gap: 40px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 40vw;
+  padding: 20px 0px;
+}
+
+.symp_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 10vw;
+}
+
+/* styre størrelen af ikoner og baggrund på dem*/
+.symp_wrapper img{
+  width: 7vw;
+  height: 7vw;
+  padding: 1vw;
+  background-color: #ffffff;
+  border-radius: 50%;
+  overflow: visible;
+  cursor: pointer;
+
+  /*animation*/
+  transition: 2s all ease;
+}
+
+/*-------------------
+------Smittevej------
+-------------------*/
+.smittevej{
+  justify-content: space-around;
+}
+
+/*animation billede*/
+#bakterie_animation{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 50px;
+
+  opacity: 0;
+  z-index: -222;
+
+
+  transition: 2s all ease;
+  animation-duration: 4s;
+  animation-delay: 3s;
+  animation-fill-mode:forwards; 
+}
+
+@keyframes bakterie {
+  0% {  
+    z-index: -222;
+    opacity: 0;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  25% {
+    width: 50px;
+    z-index: 222;
+    opacity: 1;
+
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     
   }
+
+  50% {
+    z-index: 222;
+    width: 50px;
+    opacity: 1;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    rotate: -10deg;
+  }
+
+  100% {
+    z-index: 222;
+    opacity: 1;
+    width: 700vw;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+  }
+}
+
+/*animation tekst*/
+
+
+#smittevej_tekst{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--black-color);
+  text-align: center;
+  width: 100%;
+  z-index: 333;
+
+  opacity: 0;
+  transition: 2s all ease;
+  animation-duration: 4s;
+  animation-delay: 6s;
+  animation-fill-mode:forwards; 
+}
+
+@keyframes smittevejTekst {
+  0% {  
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
 
 /*-------------------
 -----Opsummering-----
@@ -546,49 +668,6 @@ width: 100%;
 
 
 
-/*-------------------
------Symptomer-----
--------------------*/
-.lille_overskrift{
-  font-size: 1rem;
-}
-
-.symp_container {
-  display: flex;
-  column-gap: 40px;
-  row-gap: 40px;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 40vw;
-  padding: 20px 0px;
-}
-
-.symp_wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100px;
-}
-
-.symp_wrapper img{
-  width: 100px;
-  height: 100px;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 50%;
-  overflow: visible;
-  cursor: pointer;
-
-  /*animation*/
-  transition: 2s all ease;
-}
-
-/*-------------------
-------Smittevej------
--------------------*/
-.smittevej{
-  justify-content: space-around;
-}
 
 
 /*-------------------

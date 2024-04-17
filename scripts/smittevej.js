@@ -3,6 +3,8 @@ const header = document.getElementsByTagName("header");
 const footer = document.getElementsByTagName("footer");
 const indhold = document.getElementsByClassName("type_container");
 const reagensglas = document.getElementsByClassName("type_reagens_wrapper");
+const bakterie = document.getElementById("bakterie_animation");
+const animation = document.getElementById("smittevej_tekst");
 const fyld = document.getElementById("fyld");
 
 //footer knappen
@@ -25,8 +27,17 @@ footerKnap[0].addEventListener("click", function() {
     //start animation
     reagensglas[0].style.transition = "1s all ease"; 
     reagensglas[0].style.animationName = "slideCenter";
+    bakterie.style.animationName = "bakterie";
+    animation.style.animationName = "smittevejTekst";
+
+    //timer til side skift
+    setTimeout(skiftSide, 10000)
+    
 });
 
+function skiftSide(){
+    window.location.href = "video.html";
+};
 //knapperne
 
 const knapper = document.getElementsByClassName("type_knap");

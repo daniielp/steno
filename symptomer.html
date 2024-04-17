@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Steno - Byg en sygdom</title>
+    <!--link til fav-icon-->
     <link rel="icon" type="image/x-icon" href="img/icons/virus.svg">
+    <!--link til css fil-->
     <link rel="stylesheet" href="/styles/style.css" />
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,9 +15,12 @@
       href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
       rel="stylesheet"
     />
+    <!--link til javascript fil-->
     <script src="scripts/symptomer.js" defer></script>
   </head>
   <body class="dark">
+
+    <!--Header, som primært bliver brugt til overskrift-->
     <header>
     <h1>VÆLG SYMPTOMER</h1>
     <p>VÆLG 3</p>
@@ -23,7 +28,10 @@
 
     <main>
 
+        <!--En div som holder styr på placering i forhold til at indholdet bliver centreret på siden-->
         <div class="type_container">
+
+            <!--En div som indeholder billede(knap) og tilhørende tekst-->
             <div class="symp_container">
                 <!--  Række 1 -->
                 <div class="symp_wrapper">
@@ -31,41 +39,49 @@
                     <h3>Hoste</h3>
                 </div>
                 
+                <!--En div som indeholder billede(knap) og tilhørende tekst-->
                 <div class="symp_wrapper">
                         <img src="img/icons/feber.svg" alt="" class="type_knap">
                     <h3>Feber</h3>
                 </div>
 
+                <!--En div som indeholder billede(knap) og tilhørende tekst-->
                 <div class="symp_wrapper">
                     <img src="img/icons/traethed.svg" alt="" class="type_knap">
                     <h3>Træthed</h3>
                 </div>
 
-                <!--  Række 2 -->
+                <!--En div som indeholder billede(knap) og tilhørende tekst-->
                 <div class="symp_wrapper">
                         <img src="img/icons/muskelsmerter.svg" alt="" class="type_knap">
                     <h3>Smerter</h3>
                 </div>
+
+                <!--En div som indeholder billede(knap) og tilhørende tekst-->
                 <div class="symp_wrapper">
                         <img src="img/icons/diarre.svg" alt="" class="type_knap">
                     <h3>Diarré</h3>
                 </div>
 
+                <!--En div som indeholder billede(knap) og tilhørende tekst-->
                 <div class="symp_wrapper">
                         <img src="img/icons/opkast.svg" alt="" class="type_knap">
                     <h3>Opkast</h3>
                 </div>
-                <!--  Række 3 -->
+
+                <!--En div som indeholder billede(knap) og tilhørende tekst-->
                 <div class="symp_wrapper">
                         <img src="img/icons/hjertebanken.svg" alt="" class="type_knap">
                     <h3>Hjertebanken</h3>
                 </div>
 
+                <!--En div som indeholder billede(knap) og tilhørende tekst-->
                 <div class="symp_wrapper">
                         <img src="img/icons/vaegttab.svg" alt="" class="type_knap">
                     <h3>Vægttab</h3>
                 </div>
 
+                <!--En div som indeholder billede(knap) og tilhørende tekst-->
                 <div class="symp_wrapper">
                         <img src="img/icons/hovedpine.svg" alt="" class="type_knap">
                     <h3>Hovedpine</h3>
@@ -74,6 +90,7 @@
             </div>
         </div>
 
+        <!--En div der indeholder en svg af et reagensglas-->
         <div class="type_reagens_wrapper">
             <svg width="98" height="358" viewBox="0 0 98 358" fill="none" xmlns="http://www.w3.org/2000/svg" class="type_reagens">
                 <path d="M14 323C14 342.33 29.67 358 49 358V358C68.33 358 84 342.33 84 323V224H14V323Z" fill="#7BB1F1" id="fyld"/>
@@ -82,8 +99,20 @@
                 </svg>
         </div>
 
+        <!--audio til de forskellige knapper-->
+        <audio src="audio/dry-cough-soundbible.mp3"></audio>
+        <audio src="audio/fire-burning.mp3"></audio>
+        <audio src="audio/snoring-wolf-sfx.mp3"></audio>
+        <audio src="audio/ouch-xd.mp3"></audio>
+        <audio src="audio/dry-fart.mp3"></audio>
+        <audio src="audio/puker.mp3"></audio>
+        <audio src="audio/heartbeat-in-ears.mp3"></audio>
+        <audio src="audio/skeleton-sounds-2.mp3"></audio>
+        <audio src="audio/eeeeeeeeeeee.mp3"></audio>
+
     </main>
    
+    <!--Footer med tilhørende knap-->
     <footer class="absolute_footer">
         <a href="smittevej.html" class="btn hoejre">
             Næste >
