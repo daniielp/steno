@@ -70,6 +70,54 @@ body {
   text-decoration: none;
 }
 
+/* baggrund*/
+#lille{
+  top: 20dvh;
+  transform: translate(-20%, -50%);
+  width: 5dvw;
+  animation-duration: 14s;
+}
+
+#mellem{
+  top: 80dvh;  
+  transform: translate(-80%, -50%);
+  width: 8dvw;
+  animation-duration: 16s;
+}
+
+#stor{
+  top: 50dvh;
+  transform: translate(-50%, -50%);
+  width: 18dvw;
+  animation-duration: 12s;
+}
+
+.baggrund {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  left: -20dvw;
+
+  z-index: -400;
+  opacity: 0.5;
+
+  animation-delay:0s;
+  animation-fill-mode:forwards; 
+  animation-timing-function: linear;
+}
+
+@keyframes slideOver {
+  from {  
+    left: -20dvw;
+  }
+
+  to {
+    left: 120dvw;
+  }
+}
+
 /*-------------------
 --------header--------
 -------------------*/

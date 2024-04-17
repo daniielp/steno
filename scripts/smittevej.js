@@ -60,6 +60,15 @@ knapper[i].addEventListener("click", function() {
             footerKnap[0].style.backgroundColor = "#ffffff";
             footerKnap[0].style.pointerEvents = "all";
 
+            //Baggrund
+            const baggrundBilleder = document.getElementsByClassName("baggrund");
+            const billeder = ["../img/icons/dråbe.svg", "../img/icons/vehikel.svg", "../img/icons/Kontakt.svg", "../img/icons/luft.svg", "../img/icons/støv.svg"];
+            let skiftBillede = billeder[i];
+            for (let i = 0; i < baggrundBilleder.length; i++) {
+                baggrundBilleder[i].src = skiftBillede;
+                baggrundBilleder[i].style.animationName = "slideOver";
+            }
+
 
         }else {
             for (let i = 0; i < knapper.length; i++) {
@@ -67,6 +76,15 @@ knapper[i].addEventListener("click", function() {
             }
             knapper[i].style.boxShadow = "0px 0px 40px #7bb1f1";
             lyde[i].play();
+
+            //Baggrund
+            const baggrundBilleder = document.getElementsByClassName("baggrund");
+            const billeder = ["../img/icons/dråbe.svg", "../img/icons/vehikel.svg", "../img/icons/Kontakt.svg", "../img/icons/luft.svg", "../img/icons/støv.svg"];
+            let skiftBillede = billeder[i];
+            for (let i = 0; i < baggrundBilleder.length; i++) {
+                baggrundBilleder[i].src = skiftBillede;
+                baggrundBilleder[i].style.animationName = "slideOver";
+            }
         }});
 }
 

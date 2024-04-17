@@ -24,6 +24,15 @@ knapper[i].addEventListener("click", function() {
             footerKnap[0].style.pointerEvents = "all";
             lyde[0].play();
 
+            //Baggrund
+            const baggrundBilleder = document.getElementsByClassName("baggrund");
+            const billeder = ["../img/icons/bakterie.svg", "../img/icons/virus.svg"];
+            let skiftBillede = billeder[i];
+            for (let i = 0; i < baggrundBilleder.length; i++) {
+                baggrundBilleder[i].src = skiftBillede;
+                baggrundBilleder[i].style.animationName = "slideOver";
+            }
+
         }else {
             for (let i = 0; i < knapper.length; i++) {
                 knapper[i].style.boxShadow = "none";
@@ -32,5 +41,17 @@ knapper[i].addEventListener("click", function() {
             knapper[i].style.boxShadow = "0px 0px 40px #7bb1f1";
             tekst[i].style.display = "flex";
             lyde[0].play();
+
+            //Baggrund
+            const baggrundBilleder = document.getElementsByClassName("baggrund");
+            const billeder = ["../img/icons/bakterie.svg", "../img/icons/virus.svg"];
+            let skiftBillede = billeder[i];
+            for (let i = 0; i < baggrundBilleder.length; i++) {
+                baggrundBilleder[i].src = skiftBillede;
+                baggrundBilleder[i].style.animationName = "slideOver";
+            }
+
         }});
 }
+
+
