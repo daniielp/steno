@@ -646,6 +646,29 @@ width: 32px;
   padding: 2dvw 2dvw;
 }
 
+.opsummering_none{
+  opacity: 0;
+  transition: 2s all ease;
+  animation-name: skjul;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-fill-mode:forwards; 
+}
+
+@keyframes skjul {
+  0% {
+    opacity: 0;
+  }
+
+  50% {  
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .petri_wrapper{
   position: relative;
 }
