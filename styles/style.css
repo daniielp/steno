@@ -67,6 +67,7 @@ body {
   gap: calc(1rem / 2);
   border-radius: 50px;
   margin: 20px;
+  text-decoration: none;
 }
 
 /*-------------------
@@ -84,9 +85,24 @@ align-items: center;
 --------video--------
 -------------------*/
 
+.video_header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.video_header h1 {
+  color: white;
+}
+
 .video_container {
   position: relative;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 #video-player {
@@ -119,6 +135,26 @@ align-items: center;
   align-items: center;
   width: 50px;
   height: 50px;
+}
+
+.video_play_btn svg {
+  width: 32px;
+  height: 32px;
+}
+
+.video_button {
+  background-color: var(--white-color);
+  color: var(--black-color);
+  border: none;
+  font-size: 2rem;
+  padding: calc(1rem * 1) calc(1rem * 2);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: calc(1rem / 2);
+  border-radius: 50px;
+  text-decoration: none;
+  max-height: 50px;
 }
 
 .video_years {

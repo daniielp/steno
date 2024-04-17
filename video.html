@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Steno - Byg en sygdom</title>
-    <link rel="icon" type="image/x-icon" href="img/icons/virus.svg">
+    <link rel="icon" type="image/x-icon" href="img/icons/virus.svg" />
     <link rel="stylesheet" href="./styles/style.css" />
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,19 +16,28 @@
     <script src="./scripts/video-player.js" defer></script>
   </head>
   <body class="dark">
+    <header class="video_header">
+      <h1>TUBERCULOSES HISTORIE</h1>
+    </header>
     <div class="video_container">
       <video id="video-player" autoplay>
         <source src="./videos/history.mp4" type="video/mp4" />
       </video>
       <div class="video_timeline">
-        <button class="video_play_btn" id="play">Play</button>
+        <button class="video_play_btn" id="play">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+            <path
+              d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"
+            />
+          </svg>
+        </button>
         <div class="video_timeline_wrapper">
           <div id="skips" class="video_skips">
-            <button data-value="1" data-time="60" class="video_btn active">1</button>
-            <div class="spacer"></div>
-            <button data-value="2" data-time="120" class="video_btn">
-              2
+            <button data-value="1" data-time="60" class="video_btn active">
+              1
             </button>
+            <div class="spacer"></div>
+            <button data-value="2" data-time="120" class="video_btn">2</button>
             <div class="spacer"></div>
             <button data-value="3" data-time="180" class="video_btn">3</button>
             <div class="spacer"></div>
@@ -50,6 +59,7 @@
             <h3>1980</h3>
           </div>
         </div>
+        <a href="/opsummering.html" class="video_button">Næste</a>
       </div>
     </div>
   </body>
